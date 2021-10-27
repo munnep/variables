@@ -40,8 +40,13 @@ Outputs:
 
 string = "?f1a934I)uo?y4T:"
 ```
-9. Change the value in ```variables.tf``` 
-10. run terraform apply to see the resource gets recreated with a different output
+9. Change the value in ```main.tf``` to 12
+```
+variable "password_length" {
+  default = 12
+}
+```
+10. Run terraform apply to see the resource gets recreated with a different output
 ```
 terraform apply
 ```
