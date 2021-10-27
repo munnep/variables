@@ -1,8 +1,8 @@
 # Example: Variables with Terraform
 
-Terraform output values allow you to export structured data about your resources. [See documentation](https://www.terraform.io/docs/language/values/outputs.html)
+With input variables you can define centrally controlled reusable values. [See documentation](https://www.terraform.io/docs/language/values/variables.html) 
 
-In this example you will use input variables and output these. 
+In this example you will use an input variable for the length of a random string you want to get created.
 
 # Prerequisites
 
@@ -38,10 +38,11 @@ terraform apply
 ...
 Outputs:
 
-city = "Rotterdam"
-...
-...
-...
+string = "?f1a934I)uo?y4T:"
 ```
-
+9. Change the value in ```variables.tf``` 
+10. run terraform apply to see the resource gets recreated with a different output
+```
+terraform apply
+```
 
