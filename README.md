@@ -40,11 +40,21 @@ Outputs:
 
 string = "?f1a934I)uo?y4T:"
 ```
-9. Change the value in ```main.tf``` to 12
+9. Change the value or variable to 12
+
+- create `terraform.tfvars` file
 ```
-variable "password_length" {
-  default = 12
-}
+password_length = 12
+```
+
+or
+
+- override default value of variable with environmental variable
+
+```
+export TF_VAR_password_length=12
+```
+
 ```
 10. Run terraform apply to see the resource gets recreated with a different output
 ```
